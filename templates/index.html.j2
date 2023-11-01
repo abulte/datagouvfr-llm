@@ -1,0 +1,12 @@
+{% extends "layout.html.j2" %}
+{% block content %}
+  <h1>Rechercher des jeux de données similaires</h1>
+  {# instead if trigger load, maybe compute the results server side and include them in search-results #}
+  <form hx-get="/" hx-push-url="true" hx-target="#search-results" hx-trigger="load">
+    <textarea required id="query" name="query" placeholder="Similaire à une phrase...">{{ request.args.query }}</textarea>
+    <button type="submit">Chercher</button>
+    <div class="htmx-indicator">Chargement...</div>
+  </form>
+  <div id="search-results"></div>
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+{% endblock content %}

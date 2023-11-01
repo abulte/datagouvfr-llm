@@ -1,0 +1,5 @@
+{% for similar in similars %}
+<article hx-get="/embed/{{ similar.id }}" hx-trigger="load">
+  {{ similar.id }}
+</article>
+{% endfor %}

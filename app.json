@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "dokku": {
+      "predeploy": "llm embed -m sentence-transformers/all-MiniLM-L6-v2 -c 'hello world'"
+    }
+  }
+}

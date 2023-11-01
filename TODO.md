@@ -1,0 +1,22 @@
+- [x] see what gpt&co can be used for (not embeddding, not similar...)
+    - it's used for "chat" features, independant from embeddings stuff
+- [x] filter archived datasets
+- [ ] find another embedding model optimized for FR long descs
+    - how to add another model to llm embed locally and remotely?
+        - https://llm.datasette.io/en/stable/embeddings/writing-plugins.html
+- [ ] see how to deploy a "search" POC with datasette and dokku
+    - compute embeddings through current logic
+    - ship it to remote server
+        - datasette should provide an API to the embeddings database
+    - use https://datasette.io/plugins/datasette-llm-embed on remote server
+        - that creates an API endpoint which can:
+            - compute embedding for the search query
+            - compute similarity of search query vs computed embeddings
+    - need an interface to call the APIs
+        - eg https://observablehq.com/@simonw/search-for-faucets-with-clip-api
+        - this could "unwrap" the dataset from data.gouv.fr too
+            - Flask + HTMX? Vuejs? Datasette plugin?
+        - can also compute similarities from a dataset easily
+    - refs:
+        - https://til.simonwillison.net/fly/clip-on-fly
+- [ ] cron to update embeddings

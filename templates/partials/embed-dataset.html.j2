@@ -1,0 +1,8 @@
+<h4>{{ dataset.title }}</h4>
+<i>publié par {% if dataset.owner %}
+  {{ dataset.owner.first_name }} {{ dataset.owner.last_name }}
+{% else %}
+  <a href="{{ dataset.organization.page }}">{{ dataset.organization.name }}</a>
+{% endif %}</i>
+<div>{{ dataset.description|from_markdown }}</div>
+<div><a href="{{ dataset.page }}" class="button">Voir sur data.gouv.fr</a></div>

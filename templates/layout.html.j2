@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {# could be do more cleanly with vary header https://htmx.org/docs/#caching #}
+  <meta name="htmx-config" content='{"getCacheBusterParam": true}'>
+  <title>datagouvfr-llm</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+  <main>{% block content %}{% endblock content %}</main>
+  <footer>
+    <a href="https://github.com/abulte/datagouvfr-llm">Code source et détails techniques</a></p>
+  </footer>
+</body>
+</html>
